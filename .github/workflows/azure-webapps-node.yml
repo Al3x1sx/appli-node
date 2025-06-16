@@ -30,7 +30,6 @@ jobs:
           npm install
           npm run build --if-present
           # Test en mode headless, sinon erreur X11
-          CHROME_BIN=$(which google-chrome-stable) npm run test --if-present
         env:
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
           DISPLAY: ':99.0'  # Empêche certains frameworks de planter même en headless
